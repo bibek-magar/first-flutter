@@ -1,0 +1,68 @@
+RaisedButton(
+  color: Colors.blue,
+  textColor: Colors.white,
+  child: Text("A Raised button"),
+  onPressed: () {
+    print("Raised is pressed");
+  }
+) 
+
+//Replace After
+ElevatedButton(
+  style: ButtonStyle(
+    backgroundColor: MaterialStateProperty.all(Colors.blue),
+    foregroundColor:  MaterialStateProperty.all(Colors.white),
+  ),
+  child: Text("A Raised button"),
+  onPressed: () {
+    print("Raised is pressed");
+  }
+) 
+
+ElevatedButton(
+  style: ButtonStyle.styleFrom(primary: Colors.orange,onPrimary: Color.white)
+  child: Text("A Raised button"),
+  onPressed: () {
+    print("Raised is pressed");
+  }
+) 
+
+//Old button
+FlatButton(
+  color: Colors.blue,
+  textColor: Colors.white,
+  child: Text("A Flat button"),
+  onPressed: () {
+    print("Flat is pressed");
+  }
+) 
+
+TextButton(
+  child: Text("A Flat button"),
+  style: TextButton.styleFrom(primary: Colors.orange),
+  onPressed: () {
+    print("Flat is pressed");
+  }
+) 
+
+//Old button
+OuttlineButton(
+  borderSide: BorderSide(color: Colors.blue),
+  color: Colors.blue,
+  textColor: Colors.white,
+  child: Text("A OUtline button"),
+  onPressed: () {
+    print("outline is pressed");
+  }
+) 
+
+OuttlinedButton(
+  style: OuttlineButton.styleFrom(
+    primary: Colors.orange,
+    side: BorderSide(color: Colors.orange),
+  ),
+  child: Text("A OUtline button"),
+  onPressed: () {
+    print("outline is pressed");
+  }
+) 
